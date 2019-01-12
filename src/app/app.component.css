@@ -1,0 +1,37 @@
+.white {
+  background-image: url(../assets/images/leaf.gif);
+}
+
+.black {
+  background-image: url(../assets/images/bricks.gif);
+}
+
+.flex-container {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: DodgerBluex;
+}
+.flex-container > div {
+  background-color: #f1f1f1;
+  color: RED;
+  width: 12%;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center; /* center items vertically, in this case */
+  align-items: center; /* center items horizontally, in this case */
+
+  line-height: 75px;
+  font-size: 10px;
+}

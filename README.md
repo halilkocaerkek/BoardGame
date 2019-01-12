@@ -1,2 +1,0 @@
-# BoardGame
-Created with CodeSandbox
