@@ -1,14 +1,11 @@
 <!-- The content below is only a placeholder and can be replaced. -->
 
 <div class="flex-container">
-  <div
-    class="button"
-    *ngFor="let cell of board; let i = index"
-    [class]="cell.class"
-    (click)="cellClick(i)"
-  >
+  <div class='button' *ngFor="let cell of board; let i = index" 
+  [class]='cell.class'
+   (click)="cellClick(i)">
     {{cell.value}}
-  </div>
+</div>
 </div>
 
 CurrentX : {{currentX}} <br />

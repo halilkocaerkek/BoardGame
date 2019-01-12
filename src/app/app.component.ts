@@ -4,19 +4,20 @@ import { Component } from "@angular/core";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
+
 export class AppComponent {
   title = "CodeSandbox";
-  private cellCount = 64;
+  private cellCount = 500;
+  private rowSize = 10;
   public board = [];
-
   public currentX = 0;
   public currentY = 0;
 
-  player = "black";
+  player = 'black';
 
   constructor() {
     for (var i = 0; i < this.cellCount; i++) {
-      this.board[i] = { value: i, class: "white" };
+      this.board[i] = { value: i, class: 'white' };
     }
   }
 
@@ -31,15 +32,15 @@ export class AppComponent {
   }
 
   private getX(index) {
-    const x = index % 8;
-    console.log("x =" + index + " : " + x);
+    const x = index % this.rowSize ;
+    console.log('x =' + index + ' : ' + x) ;
     return x;
   }
 
   private getY(index) {
-    let y = index / 8;
-    y = Math.floor(y);
-    console.log("y =" + y);
+    let y = index / this.rowSize ;
+    y = Math.round(y) ;
+    console.log('y =' + y) ;
     return y;
   }
 }
